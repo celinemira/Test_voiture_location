@@ -1,0 +1,22 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Hello AdvertCrudController!{% endblock %}
+
+{% block body %}
+<style>
+    .example-wrapper { margin: 1em auto; max-width: 800px; width: 95%; font: 18px/1.5 sans-serif; }
+    .example-wrapper code { background: #F5F5F5; padding: 2px 6px; }
+</style>
+
+<h1>Créer une nouvelle annonce</h1>
+
+    {{ form_start(advertFormtype) }}
+        {{ form_row(advertForm.title) }}
+        {{ form_row(advertFormtype.description) }}
+        {{ form_row(advertFormtype.city) }}
+        {{ form_row(advertFormtype.carYear) }}
+        {{ form_row(advertFormtype.nbKm) }}
+        {{ form_row(advertFormtype.nbDays) }}
+        <button type="submit">Save</button>
+    {{ form_end(advertFormtype) }}
+{% endblock %}
